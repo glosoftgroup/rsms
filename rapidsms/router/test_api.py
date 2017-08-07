@@ -33,8 +33,8 @@ class RouterAPITest(harness.RapidTest):
         """Send accepts a single connection."""
         connection = self.create_connection()
         message = send("echo hello", connection)
-        self.assertEqual(message.connections.identity, connection.identity)
-        self.assertEqual(message.connections.backend.name,
+        self.assertEqual(message.connections[0].identity, connection.identity)
+        self.assertEqual(message.connections[0].backend.name,
                          connection.backend.name)
 
     def test_send_with_connections(self):
@@ -42,9 +42,9 @@ class RouterAPITest(harness.RapidTest):
         connections = [self.create_connection(), self.create_connection()]
         message = send("echo hello", connections)
         self.assertEqual(len(message.connections), 2)
-        self.assertEqual(message.connections.identity,
+        self.assertEqual(message.connections[0].identity,
                          connections[0].identity)
-        self.assertEqual(message.connections.backend.name,
+        self.assertEqual(message.connections[0].backend.name,
                          connections[0].backend.name)
 
     def test_saved_message_fields_receive(self):
