@@ -20,6 +20,7 @@ setup(
         "django-tables2>=1.10.0",
         "djappsettings>=0.4.0",
         "django-selectable>=0.7.0",
+        "six==1.10.0",
     ],
 
     packages=find_packages(),
