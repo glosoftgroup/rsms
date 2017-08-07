@@ -1,0 +1,16 @@
+
+#1. URL patterns
+changed to urlpatterns = [] from urlpatterns = ()
+
+*** all urls
+
+#2. message connection
+message.connection was deprecated
+message.connections
+
+*** /rsms/rapidsms/router/test_api.py
+
+#3. variables should be lowercase
+retval
+*** /rsms/rapidsms/contrib/handlers/tests/handlers.py
+

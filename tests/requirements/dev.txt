@@ -1,0 +1,8 @@
+celery>=3.1
+mock==1.0.1
+#django>=1.8,<1.9
+django==1.11.3
+requests
+django-selectable==1.0.0
+django-tables2==1.10.0
+djappsettings==0.4.0
