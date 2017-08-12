@@ -12,7 +12,7 @@ def read_file(filename):
 
 setup(
     name="RapidSMS",
-    version=__import__('rapidsms').__version__,
+    version='0.22.0',
     license="BSD",
 
     install_requires=[
